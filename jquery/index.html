@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			padding: 5px;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			display: none;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		alert($('#box').outerWidth());
+		// alert($('#box').width());//仅仅获取宽度
+	</script>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<script>
+		$(document).ready(function () {
+			for(var i=0;i<$('li').length;i++){
+				$("li").eq(i/2).css('fontSize','30px')
+				// $("li").get(i).css('background','blue')
+			}
+		})
+	</script>
+</body>
+</html>

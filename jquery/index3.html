@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+		$('#box').click(function(){
+			alert(1);
+		})
+
+		var box = $('#box').detach();
+		$('body').append(box)
+	</script>
+</body>
+</html>
