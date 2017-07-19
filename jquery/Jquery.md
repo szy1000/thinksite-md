@@ -99,7 +99,7 @@ outerWidth()获取到是 content + padding
 给outerWidth(true)传一个true值即可！
 
 
-### 1.3text() 和 html()
+### 1.3text()  html() 以及 val() 
 text仅仅返回 标签内部的内容 不会返回标签，负值也是这样
 
 	<p id="para">I am para <span>I am span</span> !</p>
@@ -123,6 +123,9 @@ html可以返回标签，但是唯一遗憾的 只能返回第一个！
 		$('p').html('<h1>das</h1>');
 	</script>
 	
+val()一般用于获取input textarea等输入控件的值
+	
+ 	$("#btn").val("thinksite");
 	
 ###1.4remove() 和 detach()
 
