@@ -3,26 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style>
-		p{
-			background-color: #f00;
-		}
-		ul{
-			background-color: yellow
-		}
-
-		
-
-		#box{
-			width: 100px;
-			height: 100px;
-			background-color: red;
-		}
-
-		#wrapper .blue{
-			background: blue;
-		}
-	</style>
 	<script src="jquery-2.1.4.js"></script>
 	<!-- <script src="jquery.color.js"></script> -->
 
@@ -31,21 +11,13 @@
 
 </head>
 <body>
-	
 	<button id="btn">click</button>
-	<div id="wrapper">
-		<div id="box"></div>
-	</div>
+	
+	<p value="hello">hello text</p>
+	<input type="text">
 	<script>
-
-		$('#box').animate({width: '200px'},2000).animate({height:'200px'},2000)
-
-
 		$('#btn').click(function(){
-			$('#box').addClass('color  blue')
-			// $('#box').stop();
-			// $('#box').stop(true,true);
-			// $('#box').finish();
+			$('input').attr('value',5)
 		})
 	</script>
 </body>
