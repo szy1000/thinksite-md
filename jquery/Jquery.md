@@ -157,7 +157,13 @@ html可以返回标签，但是唯一遗憾的 只能返回第一个！
 	
 试问：
  
+
+
 1. outWidth是获取padding + content 的值
 获取分别获取div的content width margin-top的值？
+2.	innerWidth 和outWidth的区别？
+3.	如果html('&lt; h1 &gt; 哈哈 &lt; /h1 &gt;') 和 text('&lt; h1 &gt; 哈哈 &lt; /h1 &gt;') 参考1.3
+4.	试一试*$('#box')[0].style.background = 'blue'*
+5.	写进博客
 
 
