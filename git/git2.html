@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>git2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>版本控制 -- git</h1>
+<h2>状态查看</h2>
+<p>好的！新的一天开始了。今天我们要继续工作，添加内容。</p>
+<p>我们对readme.txt文件 添加一点东西。</p>
+<p><img src="http://i.imgur.com/JReB3lO.png" /></p>
+<p>在命令行里面输入：</p>
+<pre><code>git status
+</code></pre>
+
+<p>查看当前的状态：</p>
+<pre><code>$ git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+        modified:   readme.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+
+<p>大致的信息就是： readme.txt文件被修改，改变的内容没有提交。</p>
+<p>虽然git status能够告诉我们哪个文件被修改过。 但是我们并不知道，文件的哪里被修改了。</p>
+<pre><code>$ git diff
+diff --git a/readme.txt b/readme.txt
+index ef91ba6..8afe9de 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1 +1,3 @@
+-created readme file
+\ No newline at end of file
++created readme file&lt;A3&gt;&lt;A1&gt;
++
++go on working!!!
+\ No newline at end of file
+</code></pre>
+
+<p>最底下的 + 表示添加的部分。 如果有删除部分的话！ 就显示 - 。</p>
+<p>至此，我们已经知道哪里被修改过！接下来就是&quot;添加文件&quot;了</p>
+<pre><code>git add readme.txt
+
+git status 
+</code></pre>
+
+<p>添加文件到暂存区，再来查看状态，显示没有被提交。</p>
+<pre><code>$ git status
+On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+modified:   readme.txt
+</code></pre>
+
+<p>提交之后，再看状态：</p>
+<pre><code>git commit -m &quot;add some more&quot;
+</code></pre>
+
+<p>添加后：</p>
+<pre><code>$ git commit -m &quot;add some more&quot;
+[master c97e5f8] add some more
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+</code></pre>
+
+<p>最后查看状态：</p>
+<pre><code>git status
+</code></pre>
+
+<p>显示工作区 是干净的了</p>
+<pre><code>$ git status
+On branch master
+nothing to commit, working directory clean
+</code></pre>
+
+<p>至此！你已经会了 修改文件 并将其提交到版本库了。</p>
+<p>至于工作区和暂存区的概念，我们后面会讲到！</p>
+<h2>版本回退</h2>
+<blockquote>
+<p>--人非圣贤孰能无过！</p>
+</blockquote>
+<p>提交了错误的版本，在工作当中是时有发生，碰到这样的情况怎么办？</p>
+<p>git的作者早就为我们想好了！</p>
+<p>我们需要使用：</p>
+<pre><code>git log  
+</code></pre>
+
+<p>显示出来所有的版本号：</p>
+<pre><code>$ git log
+commit 96c20466832f0d4bdf090500fa15ce92e370c1bb
+Author: szy1000 &lt;1538078053@qq.com&gt;
+Date:   Thu Jun 1 16:07:06 2017 +0800
+
+delete
+
+commit 8b50a57da2dd1250c29b3dbf6951c9ee85ceaa7f
+Author: szy1000 &lt;1538078053@qq.com&gt;
+Date:   Thu Jun 1 16:05:42 2017 +0800
+
+add some more
+
+commit c97e5f825a30d7ce76d599af3d8536e4d11bf545
+Author: szy1000 &lt;1538078053@qq.com&gt;
+Date:   Thu Jun 1 15:43:27 2017 +0800
+
+add some more
+
+commit 6735914237478ffe175e32c3d0ba776f690a5689
+Author: szy1000 &lt;1538078053@qq.com&gt;
+Date:   Thu Jun 1 15:01:48 2017 +0800
+
+created readme
+</code></pre>
+
+<p>到这里大家，就可以看到所有的信息都显示了。而且也看到 git commit -m &quot;描述&quot;的作用了吧！</p>
+<p>如何去回退到指定的版本呢？</p>
+<p>git reset --hard &quot;版本号&quot;</p>
+<pre><code>git reset --hard 6735914
+</code></pre>
+
+<p>即可回退到你想要的版本。</p>
+<p>如图 我回退到最初的版本了！</p>
+<p><img src="http://i.imgur.com/RvDTtSo.gif" /></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

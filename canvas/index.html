@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{margin:0;}
+	</style>
+</head>
+<body>
+	<canvas width="300" height="400" id="draw"></canvas>	
+	<script>
+		window.onload = function () {
+			var draw = document.getElementById('draw');
+			if(draw.getContext){
+				var context = draw.getContext("2d");
+
+				// context.strokeStyle = '#ff0';
+				// context.lineWidth = 20;
+				// context.strokeRect( 30, 30, 200, 30)
+				// context.lineCap = "round";
+
+				context.fillStyle = 'rgb(255,0,0)';
+				context.fillRect(0, 0, 200, 60);
+
+				context.fillStyle = 'rgb(200,255,0)';
+				context.fillRect(50, 40, 200, 30);
+				context.clearRect(80,10, 20,20);
+
+				context.arc(150, 200, 50, 20, 360, true);
+				context.stroke();
+
+				// context.strokeStyle = '#000';
+				// context.beginPath();
+				// context.lineWidth = 10;
+				// context.lineCap = "round";
+				// context.moveTo(20, 20);
+				// context.lineTo(200, 20);
+				// context.stroke();
+
+			}
+		}
+	</script>
+</body>
+</html>

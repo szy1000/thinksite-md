@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{margin:0;}
+	</style>
+</head>
+<body>
+	<canvas width="300" height="400" id="draw"></canvas>	
+	<script>
+		window.onload = function () {
+			var draw = document.getElementById('draw');
+			if(draw.getContext){
+				var context = draw.getContext("2d");
+
+				context.beginPath();   //开始绘制
+				context.strokeStyle = 'red';
+				context.arc(150, 200, 50, 0, 1 * Math.PI, true);
+				// context.arc(x, y, radius, startAngle, endAngle, anticlockwise)
+				context.stroke();
+
+				context.strokeStyle = '#000';
+				context.beginPath();
+				context.lineWidth = 10;
+				context.lineCap = "round";
+				context.moveTo(20, 20);
+				context.lineTo(200, 20);
+				context.stroke();
+
+			}
+		}
+	</script>
+</body>
+</html>
