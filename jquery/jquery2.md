@@ -82,6 +82,9 @@ nextUntil()获取的是同级后面的所有元素知道某个元素 但是不�
 		<li class="ccc">5</li>
 	</ul>
 
+语法规则：
+nextUntil(element,filter)
+
 	<script>
 		$(document).click(function(){
 			$('.two').nextUntil('.ccc').css('background','yellow');
@@ -132,4 +135,3 @@ wrapAll()需要注意的是
 1. 子节点怎么去获取，使用什么方法？
 2. 兄弟节点的前面元素怎么获取？
 3. 包装子元素怎么办？拆包怎么办？参考1.5
-4. **拆包的什么会有一个小坑！！！ body**
