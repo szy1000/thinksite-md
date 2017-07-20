@@ -7,18 +7,48 @@
 		p{
 			background-color: #f00;
 		}
+		ul{
+			background-color: yellow
+		}
+
+		
+
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+
+		#wrapper .blue{
+			background: blue;
+		}
 	</style>
-	<script src="jquery-2.1.4.js"></script>
+	<!-- <script src="jquery-2.1.4.js"></script> -->
+	<script src="jquery.color.js"></script>
+
+		<script src="http://runjs.cn/js/sandbox/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/364/hae3fjbj/jquery.color.js"></script>
+
 </head>
 <body>
-	<p style="background-color: red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto veritatis voluptatem quas, atque sunt nemo cupiditate tempora nisi aperiam, ipsam exercitationem non rem ex, porro impedit tempore? Labore, cumque, optio.</p>
-
+	
+	<button id="btn">click</button>
+	<div id="wrapper">
+		<div id="box"></div>
+	</div>
 	<script>
-		// alert($('p').css('backgroundColor'))
-		$('p').css({
-			"backgroundColor":"blue",
-			"fontSize": '25px'
-		});
+	$('#box').animate({
+		'backgroundColor':'blue'
+	})
+		$('#box').animate({width: '200px'},2000).animate({height:'200px'},2000)
+
+
+		$('#btn').click(function(){
+			$('#box').addClass('color  blue')
+			// $('#box').stop();
+			// $('#box').stop(true,true);
+			// $('#box').finish();
+		})
 	</script>
 </body>
 </html>
