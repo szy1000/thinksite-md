@@ -22,14 +22,24 @@
 	<script>
 		$(document).ready(function(){
 			// jq('#btn').toggle(function(){
-			// 	jq('.box').hide()
+			// 	jq('.box').hide()s
 			// },function(){
 			// 	jq('.box').show()
 			// })
 			
 			$('#btn').click(function(){
-				$('.box').toggle()
+				$('.box').attr('data-id','aaa');
+				// $('.box').data('data-id','aaa');
+				alert($('.box').data('data-id'))
 			})
+
+			$("body").data("foo", 52);
+			$("body").data("bar", { myType: "test", count: 40 });
+			$("body").data({ baz: [ 1, 2, 3 ] });
+			 
+			$("body").data("foo"); // 52
+			$("body").data(); // { foo: 52, bar: { myType: "test", count: 40 }, baz: [ 1, 2, 3 ] }
+	
 		})
 	</script>
 </body>
