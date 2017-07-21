@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script src="jquery-1.8.0.js"></script>
+</head>
+<body>
+
+	<button id="btn">click</button>
+
+	<div class="box"></div>
+	<script>
+		$(document).ready(function(){
+			
+			$('#btn').click(function(){
+				$('.box').attr('data-id','aaa');
+				// $('.box').data('data-id','aaa');
+				alert($('.box').data('data-id'))
+			})
+
+			$("body").data("foo", 52);
+			$("body").data("bar", { myType: "test", count: 40 });
+			$("body").data({ baz: [ 1, 2, 3 ] });
+			 
+			$("body").data("foo"); // 52
+			$("body").data(); // { foo: 52, bar: { myType: "test", count: 40 }, baz: [ 1, 2, 3 ] }
+	
+		})
+	</script>
+</body>
+</html>
