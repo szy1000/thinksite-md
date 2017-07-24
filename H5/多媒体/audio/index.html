@@ -3,12 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		#control{
+			width: 30px;
+			height: 30px;
+			background: red;
+		}
+	</style>
 </head>
 <body>
-	<audio controls autoplay>
-		<source src="./fade.ogg">
-		<source src="./fade.mp3">
+	<div id="control">play</div>
+	<audio id="audio">
+		<!-- <source src="./fade.ogg"> -->
+		<source id="mp3_source" src="./fade.mp3">
 		<source src="./fade.wav">
 	</audio>
+
+	<script>
+		var music = document.getElementById('audio');
+		var control = document.getElementById('control');
+
+		control.onclick = function (e) {
+			if(music.paused){
+				music.play();
+				this.innerText = 'stop'
+			}else{
+				music.pause()
+				this.innerText = 'play'
+			}
+			var oeve =e || event;
+			oeve.stopPropagation();
+		}
+
+		document.onclick = function(){
+			// music.load();
+			// music.play();
+			console.log(music.currentTime);
+		}
+		music.ontimeupdate  = function(){
+			console.log(music.currentTime);
+			
+		}
+	</script>
 </body>
 </html>

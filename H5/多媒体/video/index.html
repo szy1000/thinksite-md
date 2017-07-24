@@ -5,12 +5,14 @@
 	<title>Document</title>
 </head>
 <body>
-	<video width="500" height="300" controls track="hello">
-		<source src="./test.webm" type="video/webm">
-		<source src="./test.ogv" type="video/ogv">
-		<source src="./test.mp4" type="video/mp4">
+	<video preload="metadata" controls width="400" height="300">
+
+		<source src="./1.mp4"  type="video/mp4">
+		<source src="./1.ogv" type="video/ogv">
 		<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-		<track src="subtitles_no.vtt" kind="subtitles" srclang="no"label="中文">
+    <track src="subtitles_no.vtt" kind="subtitles" srclang="no"label="中文">
+		您的游览器不支持，请....
 	</video>
+
 </body>
 </html>
