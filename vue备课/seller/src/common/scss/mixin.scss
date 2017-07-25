@@ -19,7 +19,7 @@ $gray-base:              rgb(147,153,159);
 @mixin border-none($color){
 	position: relative;
 	&:after{
-		display:none;
+		display:none!important;
 		position: absolute;
 		left:0;
 		bottom:0;

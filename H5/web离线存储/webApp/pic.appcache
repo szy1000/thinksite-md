@@ -1,9 +1,13 @@
 CACHE MANIFEST
 
 CACHE:
-index.html
+grape.jpg
 404.png
 
-NETWORK
+NETWORK:
+index.html
+house.jpg
+cherry.jpg
 
-FALLBACK
+FALLBACK:
+aa/ 404.html
