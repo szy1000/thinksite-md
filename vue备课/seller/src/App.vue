@@ -7,10 +7,10 @@
         <router-link to='/goods'>商品</router-link>
       </div>
       <div class="tab-item">
-        <router-link to='/ratings' >评价</router-link>
+        <router-link to='/ratings'>评价</router-link>
       </div>
       <div class="tab-item">
-        <router-link to='/seller' >商家</router-link>
+        <router-link to='/seller'>商家</router-link>
       </div>
     </div>
     <keep-alive>
@@ -23,7 +23,6 @@
   import iheader from './components/header/header.vue';
 
   export default {
-    name: 'app',
     data() {
       return {
         seller: Object
@@ -31,8 +30,7 @@
     },
     created() {
       this.$http.get('api/seller').then(response => {
-        this.seller = response.body;
-        console.log(this.seller.seller.name);
+        this.seller = response.body.seller;
       });
     },
     components: {
