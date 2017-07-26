@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <iheader :seller="seller"></iheader>
+    <iheader :seller = "seller"></iheader>
 
     <div class="tab border-1px">
       <div class="tab-item">
@@ -13,7 +13,6 @@
         <router-link to='/seller' >商家</router-link>
       </div>
     </div>
-
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -27,14 +26,13 @@
     name: 'app',
     data() {
       return {
-        seller: {}
+        seller: Object
       };
     },
     created() {
-      this.$http.get('./api/seller').then((response) => {
-        this.seller = response.body.seller;
-      }, (response) => {
-        alert('error');
+      this.$http.get('api/seller').then(response => {
+        this.seller = response.body;
+        console.log(this.seller.seller.name);
       });
     },
     components: {

@@ -34,7 +34,14 @@ main.jss里面注册使用
 
 	:seller = "seller"
 
-header组件：
+header组件：接受
+
+	props: {
+		seller: {
+			type:Object
+		}
+	}
+
 
 不允许用tab tab和空格混用  
 
