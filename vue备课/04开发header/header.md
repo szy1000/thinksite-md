@@ -104,7 +104,39 @@ javascript
 
 	created() {
     	this.classMap = ['decrease', 'discount', 'guarantee', 'invoice', 'special'];
-    }
+    }	
+
+背景样式：
+
+	.icon{
+		display:inline-block;
+		margin-right:4px;
+		width:12px;
+		height:12px;
+		background-size: 12px 12px;
+		background-repeat: no-repeat;
+		vertical-align: top;
+		&.decrease{
+			@include bg-images('decrease_1');
+		}
+		&.discount{
+			@include bg-images('discount_1');
+		}
+		&.guarantee{
+			@include bg-images('guarantee_1');
+		}
+		&.invoice{
+			@include bg-images('invoice_1');
+		}
+		&.special{
+			@include bg-images('special_1');
+		}
+	}
+	.text{
+		line-height:12px;
+		font-size: 10px;
+		vertical-align:top;
+	}
 
 背景显示 2x图 3x图：
 
@@ -129,3 +161,10 @@ javascript
 固定遮罩：
 
 	<transition name="fade"></fade>
+
+	.fade-enter,.fade-leave-active{
+		opacity: 0;
+	}
+	.fade-enter-active, .fade-leave-active{
+		transition: all .5s;
+	}

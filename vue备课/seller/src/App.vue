@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <iheader :seller = "seller"></iheader>
+    <iheader :selleraaa = "seller"></iheader>
 
     <div class="tab border-1px">
       <div class="tab-item">

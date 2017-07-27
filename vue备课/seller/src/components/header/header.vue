@@ -35,7 +35,7 @@
     	</div>
     </div>
 	
-		<transition name="fade">
+		<transition name="">
 	    <div v-show="detailShow" class="detail">
 	    	<div class="detail-wrapper clearfix">
 	    		<div class="detail-main">
@@ -74,7 +74,7 @@
 	export default {
 	  name: 'header',
 	  props: {
-	    seller: {
+	    selleraaa: {
 	      type: Object
 	    }
 	  },
