@@ -168,3 +168,20 @@ javascript
 	.fade-enter-active, .fade-leave-active{
 		transition: all .5s;
 	}
+
+
+显示影藏
+
+	data() {
+	  	return {
+			  detailShow: false
+	  	};
+	  },
+	  methods: {
+		  showDetail() {
+		    this.detailShow = true;
+  		},
+	    closeDtail() {
+      	this.detailShow = false;
+    	}
+	  },

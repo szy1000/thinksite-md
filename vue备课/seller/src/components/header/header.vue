@@ -74,7 +74,7 @@
 	export default {
 	  name: 'header',
 	  props: {
-	    selleraaa: {
+	    seller: {
 	      type: Object
 	    }
 	  },

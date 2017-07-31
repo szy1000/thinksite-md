@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <iheader :selleraaa = "seller"></iheader>
-
+    <iheader :seller = "seller"></iheader>
     <div class="tab border-1px">
       <div class="tab-item">
         <router-link to='/goods'>商品</router-link>
