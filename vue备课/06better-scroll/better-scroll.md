@@ -246,6 +246,15 @@ npm install
   };
 </script>
 
+选择menu
+
+	selectMenu(index){
+	    console.log(index);
+	    let foodList = this.$refs.foodWrapper.getElementsByClassName('food-list-hook');
+	    let ele = foodList[index];
+	    this.foodScroll.scrollToElement(ele,300)
+	  }
+
 <style lang="scss" scoped>
   @import '../../common/scss/mixin.scss';
 
